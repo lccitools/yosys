@@ -27,7 +27,7 @@ LABEL Description "Yosys synthesis"
 ARG VERSION=0.7
 ARG JOBS=-j8
 
-RUN apt-get install -y \
+RUN apt-get update && apt-get install -y \
     python3 gawk pkg-config tcl-dev libreadline-dev libffi-dev mercurial
 
 RUN git clone https://github.com/cliffordwolf/yosys.git
